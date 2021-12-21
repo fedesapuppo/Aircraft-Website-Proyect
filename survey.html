@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flight Survey</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header>
+<h1>All About Aircraft</h1>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="airplanes.html">Airplanes</a></li>
+<li><a href="helicopters.html">Helicopters</a></li>
+<li><a href="gliders.html">Gliders</a></li>
+<li><a href="a4ar.html">A-4AR</a></li>
+<li><a href="survey.html">Flight Survey</a></li>
+</ul>
+</nav>
+</header>
+<h1>Flight Survey</h1>
+<aside>
+<figure>
+<img src="images/airplane-survey.jpg" alt="a cup of espresso" />
+</figure>
+</aside>
+<form action="flight-survey.php" method="post">
+<fieldset>
+<legend>Personal Information</legend>
+Your Name<br/>
+<input type="text" name="name" required size="40"/>
+<br/>
+Email Address<br/>
+<input type="email" name="email" required placeholder="enter a valid email address"  size="40"/>
+<br/>
+</fieldset>
+<fieldset>
+<legend>Your Favourite Aircraft:</legend>
+Tell us your favourite aircraft!<br/>
+<textarea name="preparation" cols="40" rows="6" ></textarea>
+<br/><br/>
+Have you ever flown?<br/>
+<input type="radio" name="grind" value="yes" />yes<br/>
+<input type="radio" name="grind" value="no" />no<br/>
+<br/>
+What Aircraft have you flown in?<br/>
+<input type="checkbox" name="aircraft" value="airplane" />Airplane<br/>
+<input type="checkbox" name="aircraft" value="helicopter" />Helicopter<br/>
+<input type="checkbox" name="aircraft" value="glider" />Glider<br/>
+<br/>
+What military aircraft would you fly in, if you had the oportunity?<br/>
+<select name="preference">
+<option value="">please select an aircraft</option>
+<option value="F-22">F-22 Raptor</option>
+<option value="Eurofighter">Eurofighter Typhoon </option>
+<option value=" Sukhoi">Sukhoi Su-57</option>
+<option value="a4">A4-AR Fightinghawk</option>
+<option value="Dassault Rafale">Dassault Rafale</option>
+<option value="blackhawk">UH-60 Black Hawk</option>
+</select>
+</fieldset>
+</form>
+<footer>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="airplanes.html">Airplanes</a></li>
+<li><a href="helicopters.html">Helicopters</a></li>
+<li><a href="gliders.html">Gliders</a></li>
+<li><a href="a4ar.html">A-4AR</a></li>
+<li><a href="survey.html">Flight Survey</a></li>
+</ul>
+</nav>
+</footer>
+</body>
+</html>
