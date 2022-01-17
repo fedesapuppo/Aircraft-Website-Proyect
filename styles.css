@@ -17,6 +17,10 @@ display: flex;
 flex-flow: row wrap;
 }
 
+.helicopter-ul {
+display: block;
+}
+
 a:link, a:visited {
 text-decoration:none;
 color:blue;
