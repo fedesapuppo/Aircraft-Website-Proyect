@@ -119,3 +119,13 @@ section {
     padding: 0;
     gap: 8px;
 }
+
+@media all and (max-width: 500px) {
+    blockquote {
+     font-size: larger;
+    }
+     div {
+         display: block;
+     }
+    
+    }
