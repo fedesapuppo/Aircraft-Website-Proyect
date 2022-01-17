@@ -13,6 +13,8 @@ color:blue;
 
 ul {
 list-style-image: url("images/helicopter-icon.gif");
+display: flex;
+flex-flow: row wrap;
 }
 
 a:link, a:visited {
@@ -32,8 +34,7 @@ display: flex;
 }
 
 nav li {
-display:inline;
-float:left;
+display:inline-block;
 flex: auto;
 }
 
@@ -43,6 +44,7 @@ color:white;
 display:block;
 text-align:center;
 padding: 10px 0;
+min-width: 150px;
 }
 
 nav a:hover {
@@ -71,7 +73,6 @@ margin-left:20px;
 
 header {
 background-image: url("images/background.jpg");
-height:100px;
 margin-bottom:70px;
 }
 
@@ -89,8 +90,7 @@ margin: 200px 0;
 footer nav a:link, footer nav a:visited {
 color:gray;
 text-decoration:none;
-display:block
-width:160px;
+display: block;
 text-align:center;
 background-color:white;
 }
