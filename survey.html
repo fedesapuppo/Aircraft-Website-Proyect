@@ -21,6 +21,7 @@
 </ul>
 </nav>
 </header>
+
 <div>
 <h1>Flight Survey</h1>
 <aside>
@@ -38,6 +39,7 @@ Email Address<br/>
 <input type="email" name="email" required placeholder="enter a valid email address"  size="40"/>
 <br/>
 </fieldset>
+<form>
 <fieldset>
 <legend>Your Favourite Aircraft:</legend>
 Tell us your favourite aircraft!<br/>
@@ -52,16 +54,21 @@ What Aircraft have you flown in?<br/>
 <input type="checkbox" name="aircraft" value="helicopter" />Helicopter<br/>
 <input type="checkbox" name="aircraft" value="glider" />Glider<br/>
 <br/>
+
 What military aircraft would you fly in, if you had the oportunity?<br/>
-<select name="preference">
-<option value="">please select an aircraft</option>
-<option value="F-22">F-22 Raptor</option>
-<option value="Eurofighter">Eurofighter Typhoon </option>
-<option value=" Sukhoi">Sukhoi Su-57</option>
-<option value="a4">A4-AR Fightinghawk</option>
-<option value="Dassault Rafale">Dassault Rafale</option>
-<option value="blackhawk">UH-60 Black Hawk</option>
+
+<select name="preference" id="preference">
+    <option value="">-- please select an aircraft --</option>
+    <option value="F-22">F-22 Raptor</option>
+    <option value="Eurofighter">Eurofighter Typhoon </option>
+    <option value="Sukhoi">Sukhoi Su-57</option>
+    <option value="a4">A4-AR Fightinghawk</option>
+    <option value="Dassault Rafale">Dassault Rafale</option>
+    <option value="blackhawk">UH-60 Black Hawk</option>
 </select>
+
+<p></p>
+
 </fieldset>
 </form>
 </div>
@@ -77,5 +84,35 @@ What military aircraft would you fly in, if you had the oportunity?<br/>
 </ul>
 </nav>
 </footer>
+
+<script>
+
+const select = document.querySelector('select');
+const para = document.querySelector('p');
+
+select.addEventListener('change', setDescription);
+
+function setDescription() {
+  const choice = select.value;
+
+  if (choice === "F-22") {
+    para.textContent = "An American single-seat, twin-engine, all-weather stealth tactical fighter aircraft developed for the United States Air Force";
+  } else if (choice === "Eurofighter") {
+    para.textContent = "An European twin-engine, canard delta wing, multirole fighter";
+  } else if (choice === "Sukhoi") {
+    para.textContent = "A Russian single-seat, twin-engine stealth multirole fighter developed by Sukhoi";
+  } else if (choice === "a4") {
+    para.textContent = "A single-seat subsonic carrier-capable light attack aircraft developed for the United States Navy";
+  } else if (choice === "Dassault Rafale") {
+    para.textContent = "A French twin-engine, canard delta wing, multirole fighter aircraft designed and built by Dassault Aviation"
+  } else if (choice === "blackhawk") {
+    para.textContent = "A four-blade, twin-engine, medium-lift utility helicopter manufactured by Sikorsky Aircraft"
+  } else {
+    para.textContent = '';
+  }
+}
+
+</script>
+
 </body>
 </html>
