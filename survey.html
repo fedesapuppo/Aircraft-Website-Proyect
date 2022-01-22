@@ -95,22 +95,31 @@ select.addEventListener('change', setDescription);
 function setDescription() {
   const choice = select.value;
 
-  if (choice === "F-22") {
-    para.textContent = "An American single-seat, twin-engine, all-weather stealth tactical fighter aircraft developed for the United States Air Force";
-  } else if (choice === "Eurofighter") {
-    para.textContent = "An European twin-engine, canard delta wing, multirole fighter";
-  } else if (choice === "Sukhoi") {
-    para.textContent = "A Russian single-seat, twin-engine stealth multirole fighter developed by Sukhoi";
-  } else if (choice === "a4") {
-    para.textContent = "A single-seat subsonic carrier-capable light attack aircraft developed for the United States Navy";
-  } else if (choice === "Dassault Rafale") {
-    para.textContent = "A French twin-engine, canard delta wing, multirole fighter aircraft designed and built by Dassault Aviation"
-  } else if (choice === "blackhawk") {
-    para.textContent = "A four-blade, twin-engine, medium-lift utility helicopter manufactured by Sikorsky Aircraft"
-  } else {
-    para.textContent = '';
+  switch (choice) {
+    case "F-22":
+      para.textContent = "An American single-seat, twin-engine, all-weather stealth tactical fighter aircraft developed for the United States Air Force";
+      break;
+    case "Eurofighter":
+      para.textContent = "An European twin-engine, canard delta wing, multirole fighter";
+      break;
+    case "Sukhoi":
+      para.textContent = "A Russian single-seat, twin-engine stealth multirole fighter developed by Sukhoi";
+      break;
+    case "a4":
+      para.textContent = "A single-seat subsonic carrier-capable light attack aircraft developed for the United States Navy";
+      break;
+    case "Dassault Rafale":
+      para.textContent = "A French twin-engine, canard delta wing, multirole fighter aircraft designed and built by Dassault Aviation"
+      break;
+    case "blackhawk":
+      para.textContent = "A four-blade, twin-engine, medium-lift utility helicopter manufactured by Sikorsky Aircraft"
+      break;
+    default:
+      para.textContent = "";
   }
 }
+
+
 
 </script>
 
